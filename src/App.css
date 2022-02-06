@@ -33,3 +33,6 @@
 	color: black;
 	font-family: Arial, Helvetica, sans-serif;
 }
+.squareTile:active {
+	background-color: #dad6d6;
+}
