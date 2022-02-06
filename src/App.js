@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Box from "@mui/material/Box";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [board, setBoard] = useState(Array(9).fill(null));
+
+	return (
+		<div className="App">
+			<h1>Tic Tac Toe</h1>
+			<Box className="board" sx={{ display: "flex", flexDirection: "column" }}>
+				<Box className="row"></Box>
+				<Box className="row"></Box>
+				<Box className="row"></Box>
+			</Box>
+		</div>
+	);
 }
 
 export default App;
