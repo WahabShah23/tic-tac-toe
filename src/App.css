@@ -11,7 +11,7 @@
 .board {
 	width: 500px;
 	height: 500px;
-	border: 1px solid black;
+	border: 0.5px solid black;
 	background-color: #f0f0f0;
 }
 
@@ -27,7 +27,7 @@
 	place-items: center;
 	flex: 33%;
 	height: 100%;
-	border: 1px solid black;
+	border: 0.5px solid black;
 	cursor: pointer;
 	font-size: 40px;
 	color: black;

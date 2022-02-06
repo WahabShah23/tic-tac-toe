@@ -11,11 +11,12 @@ function App() {
 
 	useEffect(() => {
 		checkWinner();
+		checkTieHandler();
 	}, [board]);
 
 	useEffect(() => {
 		if (winner.state != "none") {
-			alert(`${winner.winner} won!`);
+			alert(`${winner.winner} ${winner.state}!`);
 			setBoard(Array(9).fill(null));
 			setPlayer("X");
 		}
@@ -48,6 +49,18 @@ function App() {
 				setWinner({ winner: playerOne, state: "WON" });
 			}
 		});
+	};
+
+	const checkTieHandler = () => {
+		let filled = true;
+		board.forEach((squareTile) => {
+			if (squareTile == null) {
+				filled = false;
+			}
+		});
+		if (filled) {
+			setWinner({ winner: "MATCH", state: "TIED" });
+		}
 	};
 
 	return (
